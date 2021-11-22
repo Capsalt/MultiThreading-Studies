@@ -7,7 +7,7 @@ public class WaitInterrupt {
         Thread thread1 = new Thread(new Runnable() {
             @Override
             public void run() {
-                obj.paracekme(800);
+                obj.paracekme(1000);
             }
         });
         //thread1.setName("thread1");
@@ -16,11 +16,11 @@ public class WaitInterrupt {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                obj.parayatirma(2000);
+                obj.parayatirma(2200);
                 thread1.interrupt();
             }
         });
